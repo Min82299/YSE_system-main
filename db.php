@@ -1,18 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = ""; // với XAMPP mặc định là chuỗi rỗng
-$dbname = "cobini_pos";
+// データベース接続情報
+$servername = "localhost";  // サーバー名
+$username = "root";         // ユーザー名
+$password = "";             // パスワード
+$dbname = "cobini_pos";     // データベース名
 
-// Tạo kết nối
+// データベース接続を作成
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Kiểm tra kết nối
+// 接続チェック
 if (!$conn) {
     die("接続失敗: " . mysqli_connect_error());
 }
 
-// Thiết lập charset
+// 文字セットを設定
 mysqli_set_charset($conn, "utf8");
 ?>
 
