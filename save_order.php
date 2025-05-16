@@ -18,7 +18,7 @@ if (!empty($cart)) {
         $subtotal += $item['qty'] * $item['price'];
     }
 
-    $tax_total = floor($subtotal * 0.08);
+    $tax_total = floor($subtotal * 0.10);
     $total_with_tax = $subtotal + $tax_total;
     $change = $paid - $total_with_tax;
 
@@ -27,7 +27,7 @@ if (!empty($cart)) {
         $qty = intval($item['qty']);
         $price = intval($item['price']);
         $total = $qty * $price;
-        $tax = floor($total * 0.08);
+        $tax = floor($total * 0.10);
         $total_with_tax = $total + $tax;
 
         // Chèn vào bảng sales_history với đúng cột

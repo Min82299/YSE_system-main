@@ -43,7 +43,7 @@ $change = $paid - $total;
         <p><?= $item['product_name'] ?> × <?= $item['quantity'] ?>　<?= number_format($item['total']) ?>円</p>
     <?php endforeach; ?>
     <div class="line"></div>
-    <p>消費税 (8%): <?= number_format($tax) ?>円</p>
+    <p>消費税 (10%): <?= number_format($tax) ?>円</p>
     <p><strong>合計: <?= number_format($total) ?>円</strong></p>
     <p>お預り: <?= number_format($paid) ?>円</p>
     <p>お釣り: <?= number_format($change) ?>円</p>
