@@ -124,6 +124,17 @@ function handleCheckout() {
         alert("金額が無効です。");
         return;
     }
+    // if (amount < 0) {
+    //     alert("金額は0以上でなければなりません。");
+    //     return;
+    // }
+    if (amount < parseInt(document.getElementById("total-amount").innerText)) {
+        alert("お預り金額が不足しています。");
+        return;
+    }
+    // if (confirm("お預り金額は " + amount + " 円 ですか？")) {
+    //     saveOrder(amount);
+    // }
 
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "save_order.php");
