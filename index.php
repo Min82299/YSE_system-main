@@ -141,7 +141,7 @@ function handleCheckout() {
             alert("サーバーエラーが発生しました。");
         }
     };
-    xhr.send(JSON.stringify({ cart, paid: amount })); // ✨ gửi thêm paid
+    xhr.send(JSON.stringify({ cart, paid: amount })); // ✨ add paid
 }
 
 </script>
