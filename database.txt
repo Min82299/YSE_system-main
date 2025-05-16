@@ -1,0 +1,32 @@
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price INT NOT NULL,
+    image VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO products (name, price, image) VALUES
+('コーヒー', 150, 'coffee.jpg'),
+('おにぎり', 120, 'onigiri.jpg'),
+('サンドイッチ', 250, 'sandwich.jpg'),
+('アイスクリーム', 200, 'icecream.jpg'),
+('コーラ', 130, 'Nomimono.jpg'),
+('お弁当', 460, 'Bento.jpg'),
+('おでん', 120, 'oden.jpg'),
+('肉まん', 230, 'nikuman.jpg'),
+('スムージー', 330, 'smoothie.jpg'),
+('ヨーグルト', 180, 'yogurt.jpg'),
+('新聞', 110, 'shinbun.jpg'),
+('揚げ物', 250, 'agemono.jpg');
+
+CREATE TABLE sales_history (
+    sale_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    product_name VARCHAR(100),
+    quantity INT,
+    total INT,
+    tax INT,
+    paid INT,
+    `change` INT
+);
